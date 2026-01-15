@@ -1,0 +1,28 @@
+stocks:
+  - code: "000001"
+    name: "平安银行"
+  - code: "000002"
+    name: "万科A"
+  - code: "600000"
+    name: "浦发银行"
+  - code: "600036"
+    name: "招商银行"
+
+thresholds:
+  consecutive_days:
+    enabled: true
+    rise_days: 3
+    fall_days: 3
+  
+  daily_change:
+    enabled: true
+    rise_percent: 5.0
+    fall_percent: -5.0
+
+schedule:
+  enabled: true
+  time: "15:00"
+
+output:
+  directory: "output"
+  filename: "stock_alert_{date}.txt"
